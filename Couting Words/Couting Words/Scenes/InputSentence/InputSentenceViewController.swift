@@ -8,7 +8,7 @@
 import UIKit
 
 class InputSentenceViewController: UIViewController {
-    // MARK: - Strings and numbers
+    // MARK: - Strings
     private enum Strings {
         static let buttonName = "Continuar"
         static let sentenceText = "Insira uma frase no campo abaixo"
@@ -26,7 +26,7 @@ class InputSentenceViewController: UIViewController {
     
     private lazy var sentenceLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 12, weight: .regular)
+        label.font = .systemFont(ofSize: 18, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.text = Strings.sentenceText
@@ -34,13 +34,15 @@ class InputSentenceViewController: UIViewController {
     }()
     
     private lazy var sentenceTextfield: UITextField = {
-            let textfield = UITextField()
-            textfield.translatesAutoresizingMaskIntoConstraints = false
-            textfield.keyboardType = UIKeyboardType.emailAddress
-            textfield.layer.borderWidth = 1
-            textfield.layer.cornerRadius = 8
-            textfield.autocapitalizationType = .none
-            return textfield
+            let textField = UITextField()
+            textField.translatesAutoresizingMaskIntoConstraints = false
+            textField.keyboardType = UIKeyboardType.emailAddress
+            textField.layer.borderWidth = 1
+            textField.layer.cornerRadius = 8
+            textField.autocapitalizationType = .none
+            textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
+            textField.leftViewMode = .always
+            return textField
         }()
     
     private lazy var continueButton: UIButton = {
@@ -64,6 +66,7 @@ class InputSentenceViewController: UIViewController {
         return stackView
     }()
     
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -80,7 +83,7 @@ extension InputSentenceViewController {
     func configuraSubviews() {
         view.addSubview(stackView)
         
-        stackView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
         stackView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         stackView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         
@@ -100,6 +103,7 @@ extension InputSentenceViewController {
     }
     
     @objc func nextStep() {
-        print("foi para proxima tela")
+        let viewController = ResultSentenceViewController(sentence: sentenceTextfield.text ?? "")
+        self.present(viewController, animated: true, completion: nil)
     }
 }
