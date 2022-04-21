@@ -13,6 +13,7 @@
 		BF2572A72811872B004B48D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2572A52811872B004B48D1 /* Main.storyboard */; };
 		BF2572A92811872C004B48D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF2572A82811872C004B48D1 /* Assets.xcassets */; };
 		BF2572AC2811872C004B48D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2572AA2811872C004B48D1 /* LaunchScreen.storyboard */; };
+		BF2572B828118982004B48D1 /* InputSentenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2572B728118982004B48D1 /* InputSentenceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BF2572A82811872C004B48D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF2572AB2811872C004B48D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF2572AD2811872C004B48D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF2572B728118982004B48D1 /* InputSentenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSentenceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		BF25729E2811872B004B48D1 /* Couting Words */ = {
 			isa = PBXGroup;
 			children = (
+				BF2572B3281188C9004B48D1 /* Scenes */,
 				BF25729F2811872B004B48D1 /* AppDelegate.swift */,
 				BF2572A12811872B004B48D1 /* SceneDelegate.swift */,
 				BF2572A32811872B004B48D1 /* ViewController.swift */,
@@ -65,6 +68,22 @@
 				BF2572AD2811872C004B48D1 /* Info.plist */,
 			);
 			path = "Couting Words";
+			sourceTree = "<group>";
+		};
+		BF2572B3281188C9004B48D1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BF2572B4281188EE004B48D1 /* InputSentence */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BF2572B4281188EE004B48D1 /* InputSentence */ = {
+			isa = PBXGroup;
+			children = (
+				BF2572B728118982004B48D1 /* InputSentenceViewController.swift */,
+			);
+			path = InputSentence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF2572B828118982004B48D1 /* InputSentenceViewController.swift in Sources */,
 				BF2572A42811872B004B48D1 /* ViewController.swift in Sources */,
 				BF2572A02811872B004B48D1 /* AppDelegate.swift in Sources */,
 				BF2572A22811872B004B48D1 /* SceneDelegate.swift in Sources */,
